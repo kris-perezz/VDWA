@@ -1,15 +1,63 @@
 /* General Page Styling */
 body {
+    background-image: url("../images/background.png"); /* Adjust path if needed */
+    background-size: cover; /* Make it cover the whole screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
     font-family: Arial, sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffb6c1;
     margin: 0;
 }
+/* Pop-up animation for containerYes */
+@keyframes popupEffect {
+    0% {
+        transform: translate(-50%, 50%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+}
 
+.containerYes {
+    position: absolute;
+    bottom: 100px;  /* Adjust this value to move it up/down */
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    padding: 40px; /* Increase padding for a larger box */
+    background-color: white;
+    border-radius: 8px;
+    opacity: 0;
+    animation: popupEffect 0.8s ease-out forwards;
+    font-size: 2rem; /* Make text bigger */
+    width: 80%; /* Make it wider */
+    max-width: 880px; /* Set a max width */
+    text-align: center;
+}
+
+/* Popup Image Animation */
+#popup-image {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    position: absolute;
+    bottom: 650px;  /* Adjust this value to move it up/down */
+    left: 0px;
+}
+
+/* Make the image pop up on page load */
+.loaded #popup-image {
+    opacity: 1;
+    transform: scale(1);
+    cursor: pointer;
+}
 .container {
     position: absolute;
     bottom: 100px;  /* Adjust this value to move it up/down */
@@ -25,15 +73,33 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Dialogue Box Styling */
+.cat-img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
 /* Arrow Button Styling */
+/* Position the Next button on the bottom right of the dialogue */
 #next-btn {
-    font-size: 5rem;
+    position: absolute;
+    bottom: 40px;  /* Adjust as needed */
+    right: 340px;  /* Adjust as needed */
     background: none;
     border: none;
     cursor: pointer;
-    position: relative;
-    bottom: 30px;
-    right: 420px;
+}
+
+/* Style the Next button image */
+.next-img {
+    width: 60px; /* Adjust size */
+    height: auto;
+    opacity: 0.8; /* Slight transparency */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.next-img:hover {
+    opacity: 1; /* Full opacity on hover */
 }
 
 /* Choice Container (Hidden Initially) */

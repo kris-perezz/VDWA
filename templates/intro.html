@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/intro.js') }}"></script>
+</head>
+<body>
+
+    <!-- Background is set in CSS -->
+    <div class="container">
+        <!-- Image that pops up and moves to the main site -->
+        <img id="popup-image" src="{{ url_for('static', filename='images/catface.png') }}" alt="Welcome Image">
+    </div>
+
+</body>
+</html>

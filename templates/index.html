@@ -18,8 +18,10 @@
                 "{{ url_for('static', filename='images/DialogueBox3.png') }}"
              ]'>
 
-        <!-- Arrow Button -->
-        <button id="next-btn">→</button>
+        <!-- Next Button as an Image -->
+        <button id="next-btn">
+            <img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Next" class="next-img">
+        </button>
 
     </div>
 
