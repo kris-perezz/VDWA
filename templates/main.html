@@ -14,6 +14,9 @@
     </audio>
 
     <div class="container">
+        <!-- Display the Image -->
+        <img src="{{ url_for('static', filename='images/stardew-cat.png') }}" alt="Stardew Cats Image" class="stardew-cat-img">
+
         <h1>Will you be my Valentine? ❤️</h1>
         <div class="button-container">
             <a href="{{ url_for('yes') }}" class="btn">Yes ❤️</a>

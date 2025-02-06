@@ -66,3 +66,11 @@ p {
     background: #ddd;
     color: black;
 }
+
+
+.stardew-cat-img {
+    width: 300px;  /* Adjust width as needed */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+}
