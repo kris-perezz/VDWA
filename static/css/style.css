@@ -31,9 +31,9 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     bottom: 30px;
-    right: 330px;
+    right: 420px;
 }
 
 /* Choice Container (Hidden Initially) */
