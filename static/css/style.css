@@ -1,3 +1,4 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -10,67 +11,51 @@ body {
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 100px;  /* Adjust this value to move it up/down */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px; /* Keep padding here */
 }
 
-h1 {
-    color: #ff1493;
+/* Dialogue Box Styling */
+.dialogue-img {
+    width: 800px; /* Adjust size as needed */
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
 }
 
-p {
-    font-size: 1.2rem;
-}
-
-/* Message animation */
-.message {
-    font-size: 1.5rem;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.message.active {
-    opacity: 1;
-}
-
+/* Arrow Button Styling */
 #next-btn {
-    margin-top: 20px;
-    font-size: 2rem;
+    font-size: 5rem;
     background: none;
     border: none;
     cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    right: 330px;
 }
 
-.button-container {
-    margin-top: 20px;
+/* Choice Container (Hidden Initially) */
+#choice-container {
+    position: absolute;
+    bottom: 100px;  /* Adjust this value to move it up/down */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px; /* Keep padding here */
 }
 
-.btn {
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin: 10px;
-    display: inline-block;
-}
-
-.btn:first-child {
-    background: #ff1493;
-    color: white;
-}
-
-#no-btn {
-    background: #ddd;
-    color: black;
-}
-
-
-.stardew-cat-img {
-    width: 300px;  /* Adjust width as needed */
+/* Yes/No Button Styling */
+.choice-btn {
+    width: 800px;
     height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
+    opacity: 0.5; /* Default opacity */
+    transition: opacity 0.1s ease-in-out, border 0.1s ease-in-out;
+    margin: 5px;
 }
+
+.choice-btn:hover {
+    opacity: 1; /* Full opacity on hover */
+    border: 5px solid red;
+}
+
