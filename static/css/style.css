@@ -39,19 +39,17 @@ body {
 /* Choice Container (Hidden Initially) */
 #choice-container {
     position: absolute;
-    bottom: 100px;  /* Adjust this value to move it up/down */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px; /* Keep padding here */
+    bottom: 148px;  /* Adjust this value to move it up/down */
+    right: 312px;
+    padding: 0px; /* Keep padding here */
 }
 
 /* Yes/No Button Styling */
 .choice-btn {
-    width: 800px;
-    height: auto;
+    width: auto;
+    height: 32px;
     opacity: 0.5; /* Default opacity */
     transition: opacity 0.1s ease-in-out, border 0.1s ease-in-out;
-    margin: 5px;
 }
 
 .choice-btn:hover {
